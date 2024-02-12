@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,8 +65,21 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
+html,
+body,
+:root{
+  height: 100%;
+  width:  100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-start; */
+  /* margin-top: 5rem; */
+  background-color: rgb(40, 40, 40);
+  color: white;
+
+}
 
 @tailwind base;
 @tailwind components;
