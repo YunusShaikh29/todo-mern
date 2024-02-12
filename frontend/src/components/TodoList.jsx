@@ -51,10 +51,10 @@ const TodoList = ({ todos }) => {
               <span
                 style={{
                   textDecoration: todo.completed ? "line-through" : "none",
-                  color: "gray"
+                 
                 }}
               >
-                <h3 className="text-3xl text-orange-400 font-[500]">
+                <h3 className="text-3xl text-orange-400 font-[500]" style={{color: todo.completed ? "gray" : "rgb(251 146 60)"}}>
                   {todo.title}
                 </h3>
 
