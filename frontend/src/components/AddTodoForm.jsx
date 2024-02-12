@@ -7,12 +7,14 @@ const AddTodoForm = () => {
   const [description, setDescription] = useState("");
   const dispatch = useDispatch();
 
+  const api = import.meta.env.VITE_BASEURL
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!title.trim() || !description.trim()) return;
 
     try {
-      const response = await fetch("http://localhost:4040/api/todos", {
+      const response = await fetch(api + "/api/todos/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

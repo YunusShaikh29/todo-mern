@@ -5,9 +5,11 @@ import { toggleTodoCompletion, deleteTodo } from "../features/todoSlice";
 const TodoList = ({ todos }) => {
   const dispatch = useDispatch();
 
+  const api = import.meta.env.VITE_BASEURL
+
   const handleToggle = async (id) => {
     try {
-      const response = await fetch(`http://localhost:4040/api/todos/${id}`, {
+      const response = await fetch(`${api}/api/todos/${id}`, {
         method: "PUT",
       });
 
@@ -23,7 +25,7 @@ const TodoList = ({ todos }) => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:4040/api/todos/${id}`, {
+      const response = await fetch(`${api}/api/todos/${id}`, {
         method: "DELETE",
       });
 

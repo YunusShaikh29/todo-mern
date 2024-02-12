@@ -3,7 +3,8 @@ import axios from 'axios';
 
 // Define a thunk for fetching todos from the backend
 export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
-  const response = await axios.get('http://localhost:4040/api/todos');
+    const api = import.meta.env.VITE_BASEURL
+  const response = await axios.get(`${api}/api/todos/`);
   return response.data;
 });
 
